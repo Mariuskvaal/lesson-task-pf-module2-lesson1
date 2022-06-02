@@ -34,13 +34,13 @@ else {
 //
 
 var invoicePaid = true;
-var productDispatched = false;
-var customerHasSigned = false;
+var productDispatched = true;
+var customerHasSigned = true;
 
-if ((invoicePaid === true) && (productDispatched) === true && (customerHasSigned === true)) {
-    console.log("Order complete");
+if ((invoicePaid !== true) || (productDispatched !== true) || (customerHasSigned !== true)) {
+    console.log("Order is not complete");
 }
-else {
+
     if (invoicePaid !== true) {
         console.log("Invoice must be paid")
     }
@@ -52,5 +52,8 @@ else {
     if (customerHasSigned !== true) {
             console.log("Customer need to sign")
         }
-    
+
+else {
+    console.log ("pet accepted")
 }
+    
